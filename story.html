@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Story</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            padding-top: 60px; /* Add space for the fixed navbar */
+        }
+
+        .left-section {
+            background-color: #222;
+            width: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+            overflow: hidden;
+        }
+
+        .left-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transform: scale(1.1);
+            clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+        }
+
+        .right-section {
+            background-color: #111;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 50px;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 0;
+            padding-top: 10px;
+        }
+
+        .story-container {
+            background-color: #333;
+            padding: 15px;
+            margin-bottom: 20px;
+            overflow-y: auto;
+            height: 45vh;
+            min-height: 300px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            border: 1px solid #444;
+        }
+
+        .story-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .story-container::-webkit-scrollbar-track {
+            background: #555;
+        }
+
+        .story-container::-webkit-scrollbar-thumb {
+            background: #fcd64f;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #fcd64f;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .highlight {
+            color: #fcd64f;
+            font-weight: bold;
+        }
+
+        .why-hire-me, .key-skills {
+            padding: 15px;
+            background-color: #222;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 15px;
+        }
+
+        /* Navigation Menu (same as index page) */
+        nav ul {
+            display: flex;
+            list-style: none;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #fcd64f;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .left-section, .right-section {
+                width: 100%;
+                height: auto;
+            }
+
+            .left-section img {
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+                display: block;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .right-section {
+                padding: 20px;
+                text-align: center;
+            }
+
+            nav ul {
+                position: relative;
+                top: 10px;
+                justify-content: center;
+                margin: 20px 0;
+            }
+
+            .why-hire-me, .key-skills {
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .story-container {
+                height: 35vh;
+                min-height: 200px;
+            }
+
+            ul li {
+                font-size: 1rem;
+            }
+
+            .why-hire-me, .key-skills {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu (consistent with index page) -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="story.html">Story</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Left section with image (Profile Picture) -->
+        <div class="left-section">
+            <img src="https://i.ibb.co/Z2dhvyS/IMG-0463.jpg" alt="Profile Image">
+        </div>
+
+        <!-- Right section with scrollable story content -->
+        <div class="right-section">
+            <div class="header">
+                <h1>My Story</h1>
+            </div>
+
+            
+            <!-- Scrollable Story Content with styling -->
+            <div class="story-container" id="story">
+                <p>
+                    It all began in the era of Windows XP—a time when floppy disks were still in circulation, and the sound of a dial-up modem signaled the start of a day’s work. I wasn’t just fascinated by computers—I was determined to master them. From the moment I first sat down at a Windows 3.1 machine, I knew technology would shape my path.
+                </p>
+                <p>
+                    Over the years, I’ve journeyed through the evolution of operating systems—from Windows 3.1 through 11, alongside macOS and legacy Macintosh systems. I’ve not just watched these systems change, I’ve lived them—working with everything from the earliest Pentium processors to the most advanced, modern IT infrastructures. These foundational experiences forged my deep understanding of hardware and software, laying the groundwork for my future career.
+                </p>
+                <p>
+                    But this wasn’t just a technical journey—it was an adventure of problem-solving and innovation. As an IT Support Specialist, I’ve tackled challenges that tested my ability to diagnose, troubleshoot, and resolve complex technical issues with precision. Each new version of software or hardware brought its own set of puzzles, and I thrived in the process of solving them.
+                </p>
+                <p>
+                    Yet, I didn't stop at hardware. Over a decade ago, I ventured into the world of WordPress Development, diving into the back-end complexities of themes, plugins, and post types. From North America to Europe and the Middle East, I’ve worked with businesses to create custom WordPress solutions—websites that aren’t just visually stunning but are optimized for performance, SEO, and user experience. I’ve witnessed high-traffic sites flourish under my care, growing faster, more efficient, and more impactful than ever before.
+                </p>
+                <p>
+                    And just like how I craft WordPress sites, I also craft moments through my lens as a Photographer—capturing high-quality visuals that tell stories of their own.
+                </p>
+                <p>
+                    For more than 15 years, I’ve blended my passion for technology with a creative spark—continuously evolving, learning, and mastering the art of tech support, development, and digital creativity. Whether it’s troubleshooting complex IT issues, developing powerful WordPress sites, or capturing stunning visuals with my camera, I'm always ready for the next challenge.
+                </p>
+                <p>
+                    My name is Muhaisen, but I often go by Max or Moe. With a strong technical background and a passion for problem-solving, I bring creativity and efficiency to every project I undertake.
+                </p>
+         
+
+            <!-- Static Why Hire Me and Key Skills Sections -->
+            </div>
+
+            <!-- Static Why Hire Me and Key Skills Sections -->
+            <div class="why-hire-me" id="skills">
+                <h2>𝐖𝐡𝐲 𝐇𝐢𝐫𝐞 𝐌𝐞</h2>
+                <ul>
+                    <li><span class="highlight">IT Expertise:</span> I keep businesses running efficiently by solving critical IT issues, troubleshooting hardware/software, and optimizing systems.</li>
+                    <li><span class="highlight">WordPress Mastery:</span> I craft custom digital solutions, boosting conversions and engagement with performance-driven websites.</li>
+                    <li><span class="highlight">Versatility:</span> My expertise spans IT support, web development, and photography, allowing me to tackle diverse challenges.</li>
+                    <li><span class="highlight">Creative Problem-Solving:</span> I deliver fast, effective solutions in high-pressure situations.</li>
+                    <li><span class="highlight">Strong Communication:</span> Fluent in English and Arabic, I collaborate seamlessly with global clients.</li>
+                </ul>
+            </div>
+
+            <div class="key-skills">
+                <h2>𝐊𝐞𝐲 𝐒𝐤𝐢𝐥𝐥𝐬</h2>
+                <ul>
+                    <li>• <span class="highlight">IT Support:</span> Skilled in troubleshooting hardware/software issues, network setup, Windows/macOS administration, system optimization, and remote support.</li>
+                    <li>• <span class="highlight">WordPress:</span> Custom themes, plugins, SEO, WooCommerce.</li>
+                    <li>• <span class="highlight">Photography:</span> Portrait, event, product photography.</li>
+                </ul>
+                <p>Bringing me on board means you’ll have a highly-skilled, multi-faceted professional focused on solving complex problems, optimizing operations, and consistently delivering results that drive business growth and success.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
